@@ -207,6 +207,7 @@ def configure_linux(ctx):
 
     # Check optional packages
     opt_pkgs = [('x11', 'x11', None, list_contains(ctx.options.flavors, 'x11')),
+                ('xrandr', 'Xrandr', None, list_contains(ctx.options.flavors, 'x11')),
                 ('libdrm','drm', None, list_contains(ctx.options.flavors, 'drm')),
                 ('gbm','gbm', None, list_contains(ctx.options.flavors, 'drm')),
                 ('libudev', 'udev', None, list_contains(ctx.options.flavors, 'drm')),
